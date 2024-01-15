@@ -329,6 +329,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     nothing-fwk
 
+# Nothing-glyph
+PRODUCT_PACKAGES += \
+    nothing-glyph.pong
+
 # OMX
 PRODUCT_PACKAGES += \
     libOmxCore \

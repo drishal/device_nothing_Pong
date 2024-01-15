@@ -1,0 +1,2 @@
+# PowerShare
+type sysfs_powershare, fs_type, sysfs_type;
