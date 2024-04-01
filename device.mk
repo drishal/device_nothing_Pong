@@ -343,6 +343,10 @@ PRODUCT_PACKAGES += \
     FrameworksResTarget \
     WifiResTarget
 
+# ParanoidGlyph
+PRODUCT_PACKAGES += \
+    ParanoidGlyphPhone2
+
 # PONG overlays
 PRODUCT_PACKAGES += \
     NTCarrierConfigResTarget \
