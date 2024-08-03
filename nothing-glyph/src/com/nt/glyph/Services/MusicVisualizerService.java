@@ -114,6 +114,18 @@ public class MusicVisualizerService extends Service {
     }
 
     private void processAudioFFT(byte[] audioBytes) {
+    if (mVisualizer == null) {
+        Log.e(TAG, "Visualizer is not initialized");
+        return;
+    }
+
+    try {
+        // Ensure the Visualizer is enabled before accessing its properties
+        if (!mVisualizer.getEnabled()) {
+            Log.e(TAG, "Visualizer is not enabled");
+            return;
+        }
+
         // The first byte is the DC component of the FFT result (real only)
         int energySum = Math.abs(audioBytes[0]);
 
@@ -266,6 +278,9 @@ public class MusicVisualizerService extends Service {
             mSystemTimeStartSec = currentTime;
         }
         mNumberOfSamplesInOneSec++;
+    } catch (IllegalStateException e) {
+        Log.e(TAG, "Error accessing Visualizer state: " + e.getMessage());
+    }
 
     }
 }
