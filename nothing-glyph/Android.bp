@@ -1,0 +1,72 @@
+// Copyright (C) 2022-2024 Paranoid Android
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+java_defaults {
+    name: "glyph_app_defaults",
+
+    certificate: "platform",
+    platform_apis: true,
+    privileged: true,
+    system_ext_specific: true,
+
+    resource_dirs: [],
+}
+
+android_library {
+    name: "nothing-glyph-core",
+    platform_apis: true,
+
+    srcs: [
+        "src/**/*.java",
+        "src/**/*.kt"
+    ],
+
+    static_libs: [
+        "androidx.core_core",
+        "androidx.preference_preference",
+        "SettingsLib",
+    ],
+}
+
+android_app {
+    name: "nothing-glyph.pong",
+
+    defaults: ["glyph_app_defaults"],
+
+    asset_dirs: ["assets"],
+    resource_dirs: ["res"],
+
+    static_libs: [
+        "nothing-glyph-core",
+    ],
+
+    required: [
+        "privapp_whitelist_com.nt.glyph.xml",
+        "whitelist_com.nt.glyph.xml",
+    ],
+}
+
+prebuilt_etc {
+    name: "privapp_whitelist_com.nt.glyph.xml",
+    src: "permissions/privapp_whitelist_com.nt.glyph.xml",
+    sub_dir: "permissions",
+    system_ext_specific: true,
+}
+
+prebuilt_etc {
+    name: "whitelist_com.nt.glyph.xml",
+    src: "permissions/whitelist_com.nt.glyph.xml",
+    sub_dir: "sysconfig",
+    system_ext_specific: true,
+}

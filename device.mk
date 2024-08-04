@@ -258,7 +258,6 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
-    init.sim.restart.sh \
     init.target.rc \
     ueventd.nt.rc \
     ueventd.qcom.rc
@@ -334,6 +333,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     nothing-fwk
 
+# Nothing-glyph
+PRODUCT_PACKAGES += \
+    nothing-glyph.pong
+
 # OMX
 PRODUCT_PACKAGES += \
     libOmxCore \
@@ -386,6 +389,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/power/config/taro/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
+
+# PowerShare
+PRODUCT_PACKAGES += \
+    vendor.lineage.powershare@1.0-service.nt
 
 # QMI
 PRODUCT_PACKAGES += \

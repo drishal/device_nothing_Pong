@@ -141,6 +141,10 @@ qti_cpufreq_cdev.ko
 qti_devfreq_cdev.ko
 btpower.ko
 bt_fm_slim.ko
+<<<<<<< HEAD
+=======
+qcom_edac.ko
+>>>>>>> np2-dev/lineage-21
 qcom_lpm.ko
 sdhci-msm.ko
 leds-qti-flash.ko
@@ -181,6 +185,15 @@ simulated_ntc.ko
 slimbus.ko
 slim-qcom-ngd-ctrl.ko
 hwmon.ko
+<<<<<<< HEAD
+=======
+qti_amoled_ecm.ko
+stm_core.ko
+stm_p_basic.ko
+stm_p_ost.ko
+stm_console.ko
+stm_ftrace.ko
+>>>>>>> np2-dev/lineage-21
 snd-usb-audio-qmi.ko
 qrtr-smd.ko
 qrtr-mhi.ko
