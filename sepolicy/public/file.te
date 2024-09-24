@@ -1,5 +1,5 @@
 # PowerShare
-type sysfs_powershare, fs_type, sysfs_type;
+type sysfs_wls_boost, fs_type, sysfs_type;
 
 # Charger
 type proc_charger, fs_type, proc_type;
