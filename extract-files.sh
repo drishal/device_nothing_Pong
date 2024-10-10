@@ -65,12 +65,12 @@ function blob_fixup() {
         vendor/bin/hw/android.hardware.security.keymint-service-qti)
             grep -q "android.hardware.security.rkp-V3-ndk.so" "${2}" || ${PATCHELF} --add-needed "android.hardware.security.rkp-V3-ndk.so" "${2}"
             ;;
-	vendor/lib64/vendor.libdpmframework.so)
+	    vendor/lib64/vendor.libdpmframework.so)
             "${PATCHELF}" --add-needed "libhidlbase_shim.so" "${2}"
             ;;
-	vendor/etc/seccomp_policy/atfwd@2.0.policy)
-            grep -q "gettid: 1" "${2}" || echo "gettid: 1" >> "${2}"
-            ;;
+        vendor/etc/seccomp_policy/atfwd@2.0.policy | vendor/etc/seccomp_policy/wfdhdcphalservice.policy)
+            [ -n "$(tail -c 1 "${2}")" ] && echo >> "${2}"
+            grep -q "gettid: 1" "${2}" || echo "gettid: 1" >> "${2}"            ;;
         vendor/etc/wifi/qca6490/WCNSS_qcom_cfg.ini)
             sed -i "s/oem_6g_support_disable=1/oem_6g_support_disable=0/" "${2}"
             sed -i '/gtsf_ptp_options=0xb/{
