@@ -25,8 +25,8 @@ cc_binary {
         "libhardware",
         "libdl",
         "liblog",
-        "android.hardware.biometrics.fingerprint-v4-ndk",
-        "android.hardware.biometrics.common-v4-ndk",
+        "android.hardware.biometrics.fingerprint-V4-ndk",
+        "android.hardware.biometrics.common-V4-ndk",
         "android.hardware.biometrics.common.util",
     ],
     static_libs: ["libandroid.hardware.biometrics.fingerprint.NothingProps"],
@@ -40,7 +40,7 @@ sysprop_library {
 }
 
 cc_library_static {
-    name: "libudfps_extension.nothing",
+    name: "libudfps_extension.nt",
     srcs: ["UdfpsExtension.cpp"],
     include_dirs: [
         "frameworks/native/services/surfaceflinger/CompositionEngine/include"
