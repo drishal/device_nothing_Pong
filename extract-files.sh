@@ -71,6 +71,10 @@ function blob_fixup() {
         vendor/etc/seccomp_policy/atfwd@2.0.policy | vendor/etc/seccomp_policy/wfdhdcphalservice.policy)
             [ -n "$(tail -c 1 "${2}")" ] && echo >> "${2}"
             grep -q "gettid: 1" "${2}" || echo "gettid: 1" >> "${2}"            ;;
+        vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy)
+            [ "$2" = "" ] && return 0
+            grep -q "setsockopt: 1" "${2}" || echo "setsockopt: 1" >> "${2}"
+            ;;
         vendor/etc/wifi/qca6490/WCNSS_qcom_cfg.ini)
             sed -i "s/oem_6g_support_disable=1/oem_6g_support_disable=0/" "${2}"
             sed -i '/gtsf_ptp_options=0xb/{
