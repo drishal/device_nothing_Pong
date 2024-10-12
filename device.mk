@@ -502,7 +502,8 @@ PRODUCT_COPY_FILES += \
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.qti-v2
+    android.hardware.thermal@2.0-service.qti-v2 \
+    android.hardware.thermal@2.0.vendor
 
 # Trusted User Interface
 PRODUCT_PACKAGES += \
@@ -582,6 +583,9 @@ PRODUCT_BOOT_JARS += \
 # DPM
 PRODUCT_PACKAGES += \
     libhidlbase_shim
+
+
+TARGET_BOARD_PLATFORM := taro
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/nothing/Pong/Pong-vendor.mk)
