@@ -712,7 +712,7 @@ vendor/etc/init/ipa_fws.rc|2ee2a89c1b3e4bdd03506c67774cd0a06022e0f0
 vendor/etc/init/netmgrd.rc|5c592bd2cf775462e147d3def97e99abbac4631e
 vendor/etc/init/port-bridge.rc|e52d61a0de5e8a3b21bfbfca929e862422645377
 vendor/etc/init/shsusrd.rc|b4283f34cbbf770041164e498e2e4fd576bff681
-vendor/etc/seccomp_policy/atfwd@2.0.policy|b18a8d80fc6737193bf4c28f22043d30a4ca239c
+vendor/etc/seccomp_policy/atfwd@2.0.policy
 vendor/lib64/libconfigdb.so|0dcb8d205794d7e17cc1b268c0332b5c6714dc8c
 vendor/lib64/libdsi_netctrl.so|e34e0ef187af68ce96ddfa91c68f9157cae1c8f0
 vendor/lib64/libdsutils.so|7528f8421df4ed19bea2da08715174fd2b600357
@@ -843,7 +843,7 @@ vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|19430d592c7f815899844fcc22388466a81
 vendor/lib64/libdpmqmihal.so|14bd1091ff1fdd0a696c0098c3c989117f5ef01e
 vendor/lib64/vendor.libdpmctmgr.so|c42de430ab843d5718cdcd004da2c091ea387445
 vendor/lib64/vendor.libdpmfdmgr.so|990c25e3c7d739e9237690ff15be8bc4d685ff52
-vendor/lib64/vendor.libdpmframework.so|0cca4019ddbd22060d6aadc52ab24867c7924dd2
+vendor/lib64/vendor.libdpmframework.so
 vendor/lib64/vendor.libdpmtcm.so|f298dd6c2fc4250d2de054672b8c56a631e4ea01
 vendor/lib64/vendor.qti.hardware.dpmservice@1.0.so|1d690710fc30aef32e343734f7f72b6a16913389
 vendor/lib64/vendor.qti.hardware.dpmservice@1.1.so|6fea2e5f9144a841e5dbac473a2441be979ec73c
