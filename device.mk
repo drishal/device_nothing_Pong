@@ -362,7 +362,7 @@ PRODUCT_BOOT_JARS += \
 
 # Nothing-glyph
 PRODUCT_PACKAGES += \
-    nothing-glyph.pong
+	ParanoidGlyphPhone2
 
 # OMX
 PRODUCT_PACKAGES += \
