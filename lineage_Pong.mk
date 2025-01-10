@@ -31,3 +31,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceProduct=A065 \
     SystemDevice=Pong \
     SystemName=Pong
+
+PRODUCT_DEFAULT_DEV_CERTIFICATE := .android-certs/releasekey
