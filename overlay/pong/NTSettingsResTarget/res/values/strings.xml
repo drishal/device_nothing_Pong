@@ -6,4 +6,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Android version screen, build maintainer -->
     <string name="matrixx_maintainer">Drishal | Ghost</string>
+
+    <!-- bliss maintainer name -->
+    <string name="bliss_maintainer">Drishal</string>
 </resources>

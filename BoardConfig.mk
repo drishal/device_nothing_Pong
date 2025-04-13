@@ -95,7 +95,7 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image
 
 TARGET_KERNEL_SOURCE := kernel/nothing/sm8475
-TARGET_KERNEL_CONFIG := vendor/meteoric_defconfig ksu.config
+TARGET_KERNEL_CONFIG := vendor/meteoric_defconfig
 
 # Kernel modules
 BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)/modules.blocklist
@@ -142,7 +142,7 @@ ifeq ($(PRODUCT_VIRTUAL_AB_OTA),true)
     BOARD_PRODUCTIMAGE_MINIMAL_PARTITION_RESERVED_SIZE ?= true
 endif
 
-ifneq ($(WITH_GMS),true)
+ifneq ($(BLISS_BUILD_VARIANT),gapps)
     BOARD_PRODUCTIMAGE_EXTFS_INODE_COUNT ?= -1
 
     ifeq ($(BOARD_PRODUCTIMAGE_MINIMAL_PARTITION_RESERVED_SIZE),true)

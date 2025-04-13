@@ -44,3 +44,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceProduct=Pong \
     SystemDevice=Pong \
     SystemName=Pong
+
+BLISS_BUILDTYPE := OFFICIAL
+EXTRA_UDFPS_ANIMATIONS := true
+TARGET_BOOT_ANIMATION_RES := 1080
