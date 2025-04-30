@@ -88,6 +88,43 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.pro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.pro.xml \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
 
+# Art
+PRODUCT_SYSTEM_PROPERTIES += \
+    pm.dexopt.post-boot=speed \
+    pm.dexopt.first-boot=speed \
+    pm.dexopt.boot-after-ota=speed-profile \
+    pm.dexopt.boot-after-mainline-update=speed \
+    pm.dexopt.install=speed-profile \
+    pm.dexopt.install-fast=speed \
+    pm.dexopt.install-bulk=speed-profile \
+    pm.dexopt.install-bulk-secondary=speed \
+    pm.dexopt.install-bulk-downgraded=speed \
+    pm.dexopt.install-bulk-secondary-downgraded=speed \
+    pm.dexopt.bg-dexopt=speed \
+    pm.dexopt.ab-ota=speed \
+    pm.dexopt.inactive=speed \
+    pm.dexopt.cmdline=speed \
+    pm.dexopt.first-use=speed \
+    pm.dexopt.secondary=speed \
+    pm.dexopt.shared=speed \
+    pm.dexopt.downgrade_after_inactive_days=20
+
+# Always preopt extracted APKs to prevent extracting out of the APK for gms
+# modules.
+PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
+
+# Do not generate libartd.
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+
+# Speed profile services and wifi-service to reduce RAM and storage.
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := speed
+OVERRIDE_DISABLE_DEXOPT_ALL := false
+
+# Art debug
+ART_BUILD_TARGET_DEBUG := false
+ART_BUILD_HOST_DEBUG := false
+
 # Bluetooth
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
