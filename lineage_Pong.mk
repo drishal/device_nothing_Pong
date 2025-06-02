@@ -24,15 +24,9 @@ PRODUCT_CHARACTERISTICS := nosdcard
 
 PRODUCT_GMS_CLIENTID_BASE := android-nothing
 
-# To include Gapps 
-WITH_GMS := true
-TARGET_USE_REMOVEPACKAGE  := true
-
-# Device has official
-MATRIXX_BUILD_TYPE := Official
-
 # Udfps icons
 TARGET_HAS_UDFPS := true
+EXTRA_UDFPS_ANIMATIONS := true
 
 #Some more GMS Flag
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
